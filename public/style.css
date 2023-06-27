@@ -1,9 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
+    min-height: 100%;
+    width: 99%;
 }
 
 #reglog-container {
+    margin: auto;
     max-width: 400px;
     padding: 20px;
     background-color: #fff;
@@ -34,7 +37,7 @@ label {
     margin-right: 5px;
 }
 
-#reglog-button{
+.reglog-button{
     padding: 10px 20px;
     background-color: rgb(40, 40, 152);
     color: #fff;

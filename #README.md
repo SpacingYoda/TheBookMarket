@@ -1,6 +1,6 @@
 # TheBookMarket
 
-Folder/Purpose:
+Folder and Purpose:
 
 config:         Store the configuration file such as database configuration;
 
@@ -12,6 +12,12 @@ scr/inc:        Store the commonly included files such as the header and footer 
 
 scr/libs:       Store the library files, e.g., validation, sanitization, etc.;
 
+_________________________
+File and Purpose:
+
+helpers.php: Dynamic "title".
+
+bootstrap.php: A bridge to include all the necessary files.
 _________________________
 Why the ".htaccess"?
 

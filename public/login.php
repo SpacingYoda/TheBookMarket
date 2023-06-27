@@ -7,6 +7,7 @@
     <title>Log in</title>
 </head>
 <body>
+<main>
     <div id="reglog-container">
         <form id="reglog-form" action="login.php" method="post">
             <h1>Log in</h1>
@@ -18,9 +19,10 @@
                 <label for="password">Password:</label><br>
                 <input class="reglog-input" type="password" name="password" id="password">
             </div>
-            <button id="reglog-button" type="submit">Log in</button>
+            <button class="reglog-button" type="submit">Log in</button>
             <footer>Don't have an account yet? <a href="register.php">Register here</a></footer>
         </form>
     </div>
+</main>
 </body>
 </html>
