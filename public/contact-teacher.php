@@ -17,10 +17,9 @@ require_login();
 
       </ul>
     </div>
-    <a id="profile-box" href="shopcart.php">
+    <a id="profile-box" href="profile.php">
         <div id="username-box">
           <p id="username">Byron</p>
         </div>
     </a>
   </div>
-

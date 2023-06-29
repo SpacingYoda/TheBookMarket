@@ -35,8 +35,8 @@ if (is_post_request()) {
 
     if (register_user($inputs['email'], $inputs['username'], $inputs['password'])) {
         redirect_with_message(
-            'login.php',
-            'Your account has been created successfully. Please login here.'
+            'register.php',
+            'Your account has been created successfully. You can now login.'
         );
 
     }

@@ -1,28 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Log in</title>
-</head>
-<body>
-<main>
+    <?php
+
+        require __DIR__ . '/../src/bootstrap.php';
+        require __DIR__ . '/../src/login.php';
+
+    ?>
+
     <div id="reglog-container">
+    <?php view('header', ['title' => 'Login']) ?>
+
+    <?php if (isset($errors['login'])) : ?>
+        <div id="everyerror">
+            <?= $errors['login'] ?>
+        </div>
+    <?php endif ?>
+
         <form id="reglog-form" action="login.php" method="post">
-            <h1>Log in</h1>
+            <h1>Login</h1>
             <div>
-                <label for="email">Email:</label><br>
-                <input class="reglog-input" type="email" name="email" id="email">
+                <label for="username">Username:</label>
+                <input class="reglog-input" type="text" name="username" id="username" value="<?= $inputs['username'] ?? '' ?>">
+                
+                <small class="error"><?= $errors['username'] ?? '' ?></small>
             </div>
             <div>
                 <label for="password">Password:</label><br>
                 <input class="reglog-input" type="password" name="password" id="password">
+
+                <small class="error"><?= $errors['password'] ?? '' ?></small>
             </div>
-            <button class="reglog-button" type="submit">Log in</button>
+            <button class="reglog-button" type="submit">Login</button>
             <footer>Don't have an account yet? <a href="register.php">Register here</a></footer>
         </form>
     </div>
-</main>
-</body>
-</html>

@@ -25,11 +25,7 @@ const FILTERS = [
     'url' => FILTER_SANITIZE_URL,
 ];
 
-/**
-* Recursively trim strings in an array
-* @param array $items
-* @return array
-*/
+
 function array_trim(array $items): array
 {
     return array_map(function ($item) {
@@ -42,15 +38,7 @@ function array_trim(array $items): array
     }, $items);
 }
 
-/**
-* Sanitize the inputs based on the rules an optionally trim the string
-* @param array $inputs
-* @param array $fields
-* @param int $default_filter FILTER_SANITIZE_STRING
-* @param array $filters FILTERS
-* @param bool $trim
-* @return array
-*/
+
 function sanitize(array $inputs, array $fields = [], int $default_filter = FILTER_SANITIZE_STRING, array $filters = FILTERS, bool $trim = true): array
 {
     if ($fields) {
