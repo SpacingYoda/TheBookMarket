@@ -67,3 +67,22 @@ function require_login(): void
         redirect_to('login.php');
     }
 }
+
+//their username
+function current_user()
+{
+    if (is_user_logged_in()) {
+        return $_SESSION['username'];
+    }
+    return null;
+}
+
+//log out
+function logout(): void
+{
+    if (is_user_logged_in()) {
+        unset($_SESSION['username'], $_SESSION['user_id']);
+        session_destroy();
+        redirect_to('login.php');
+    }
+}
